@@ -16,8 +16,8 @@ class SendEmail:
     send_user = "494181687@qq.com"
 
     def send_mail(self,user_list,sub,content):
-        user = "shape" + "<" + send_user + ">"
-        print("user:%s" %user)
+        user = "Jeremy" + "<" + send_user + ">"
+        print("发件人:%s" %user)
 
         # 创建一个带附件的实例
         message = MIMEMultipart()
@@ -42,35 +42,35 @@ class SendEmail:
             att["Content-Disposition"] = 'attachment; filename="%s_Result.html"'% time
             #添加附件att
             message.attach(att)
+
         # 构造附件2
         # 略，有几个附件构造几个att
 
+        # try:
+        #     smtpObj = smtplib.SMTP('localhost')
+        #     smtpObj.sendmail(send_user,user_list,message.as_string())
+        #     print("[info]:邮件发送成功！！！")
+        # except smtplib.SMTPException:
+        #     print("[info]:无法发送邮件~~")
         #
-    try:
-        smtpObj = smtplib.SMTP('localhost')
-        smtpObj.sendmail(send_user,user_list,message.as_string())
-        print("[info]:邮件发送成功！！！")
-    except smtplib.SMTPExcetion:
-        print("[info]:无法发送邮件~~")
-
-        smtpObj.quit()
+        #     smtpObj.quit()
 
         #调用smtp方法发送SSL邮件
-    try:
-        server = smtplib.SMTP_SSL()
-        server.connect(email_host,465)# 启用SSL发信, 端口一般是465
-        server.set_debuglevel(1)# 打印出和SMTP服务器交互的所有信息
-        server.login(send_user,password)
-        server.sendmail(send_user,user_list,message.as_string())
-        print("[info]:邮件发送成功！！！")
-    except smtplib.SMTPException:
-        print("[info]:无法发送邮件~~")
-        server.quit()
+        try:
+            server = smtplib.SMTP_SSL()
+            server.connect(email_host,465)# 启用SSL发信, 端口一般是465
+            #server.set_debuglevel(1)# 打印出和SMTP服务器交互的所有信息
+            server.login(send_user,password)
+            server.sendmail(send_user,user_list,message.as_string())
+            print("[info]:邮件发送成功！！！")
+        except smtplib.SMTPException:
+            print("[info]:无法发送邮件~~")
+            server.quit()
 
     def send_main(self):
         #收件人列表
-        # user_list = ['xxx@qq.com','xxx@qq.com']
-        user_list = ['xxx@qq.com']
+        user_list = ['litq@fun.tv']
+        print("收件人:%s" %user_list)
         sub = "接口自动化测试报告"
         content = "接口自动化测试结果:见附件"
         self.send_mail(user_list,sub,content)

@@ -1,5 +1,6 @@
 #coding:utf-8
 import unittest
+#导入测试用例模块
 from unit_test.demo import Case
 from unit_test.test_unnitest import Test
 from util import HTMLTestRunner

@@ -52,8 +52,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 
-__author__ = "Wai Yip Tung"
-__version__ = "0.9.1"
+__author__ = "Jeremy"
+__version__ = "0.0.1"
 
 """
 Change History

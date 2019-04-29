@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>接口自动化测试报告</title>
-    <meta name="generator" content="HTMLTestRunner 0.9.1"/>
+    <meta name="generator" content="HTMLTestRunner 0.0.1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
@@ -181,12 +181,12 @@
         
     <div class='page-header'>
         <h1>接口自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-04-22 18:50:53</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.007995</p>
-<p class='attribute'><strong>状态:</strong> 错误 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-04-28 17:37:45</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00.100943</p>
+<p class='attribute'><strong>状态:</strong> 通过 2</p>
 
     </div>
-    <div style="float: left;width:50%;"><p class='description'>测试者：shapeying</p></div>
+    <div style="float: left;width:50%;"><p class='description'>测试者：Jeremy</p></div>
     <div id="chart" style="width:50%;height:400px;float:left;"></div>
 
         
@@ -214,68 +214,48 @@
             <td>查看</td>
         </tr>
         
-    <tr class='errorClass'>
+    <tr class='passClass'>
         <td>unit_test.test_unnitest.Test</td>
         <td>1</td>
-        <td>0</td>
-        <td>0</td>
         <td>1</td>
+        <td>0</td>
+        <td>0</td>
         <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_01</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_01</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        错误</a>
-    <div id='div_ft1.1' class="popup_window">
-        <pre>ft1.1: Traceback (most recent call last):
-  File "E:\workSpace\python_unittest_interface-master\unit_test\test_unnitest.py", line 28, in test_01
-    res = self.run.run_main(url,None,None,headers,'POST')
-  File "E:\workSpace\python_unittest_interface-master\util\test_get_post.py", line 20, in run_main
-    respose = self.send_post(url,data,headers)
-  File "E:\workSpace\python_unittest_interface-master\util\test_get_post.py", line 6, in send_post
-    response = requests.post(url=url,data=data,headers=headers).json()
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\api.py", line 112, in post
-    return request('post', url, data=data, json=json, **kwargs)
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\api.py", line 58, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\sessions.py", line 498, in request
-    prep = self.prepare_request(req)
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\sessions.py", line 441, in prepare_request
-    hooks=merge_hooks(request.hooks, self.hooks),
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\models.py", line 309, in prepare
-    self.prepare_url(url, params)
-  File "C:\Users\litq\AppData\Local\Programs\Python\Python36\lib\site-packages\requests\models.py", line 383, in prepare_url
-    raise MissingSchema(error)
-requests.exceptions.MissingSchema: Invalid URL 'xxx': No schema supplied. Perhaps you meant http://xxx?
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+    <div id='div_pt1.1' class="popup_window">
+        <pre>pt1.1: {'retcode': '200', 'retmsg': 'ok'}
+200
+这是第一个测试方法
 </pre>
     </div>
     <!--css div popup end-->
     </td>
 </tr>
 
-    <tr class='errorClass'>
+    <tr class='passClass'>
         <td>unit_test.demo.Case</td>
         <td>1</td>
-        <td>0</td>
-        <td>0</td>
         <td>1</td>
+        <td>0</td>
+        <td>0</td>
         <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
     </tr>
 
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_case01</div></td>
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_case01</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        错误</a>
-    <div id='div_ft2.1' class="popup_window">
-        <pre>ft2.1: Traceback (most recent call last):
-  File "E:\workSpace\python_unittest_interface-master\unit_test\demo.py", line 20, in test_case01
-    response = requests.post(url=url,data=data,headers=headers)
-NameError: name 'url' is not defined
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        通过</a>
+    <div id='div_pt2.1' class="popup_window">
+        <pre>pt2.1: 接口正常
 </pre>
     </div>
     <!--css div popup end-->
@@ -285,9 +265,9 @@ NameError: name 'url' is not defined
         <tr id='total_row'>
             <td>总计</td>
             <td>2</td>
-            <td>0</td>
-            <td>0</td>
             <td>2</td>
+            <td>0</td>
+            <td>0</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -320,9 +300,9 @@ NameError: name 'url' is not defined
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:0, name:'通过'},
+                        {value:2, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:2, name:'错误'}
+                        {value:0, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {
