@@ -181,9 +181,9 @@
         
     <div class='page-header'>
         <h1>接口自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-04-28 17:37:45</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.100943</p>
-<p class='attribute'><strong>状态:</strong> 通过 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-06-25 18:54:24</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:00.099929</p>
+<p class='attribute'><strong>状态:</strong> 通过 1 失败 1</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>测试者：Jeremy</p></div>
@@ -214,48 +214,40 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
-        <td>unit_test.test_unnitest.Test</td>
+    <tr class='failClass'>
+        <td>unit_test.demo.Case</td>
+        <td>2</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_01</div></td>
+    <td class='none'><div class='testcase'>test_case01</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
         通过</a>
     <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: {'retcode': '200', 'retmsg': 'ok'}
-200
-这是第一个测试方法
+        <pre>pt1.1: 接口通过
 </pre>
     </div>
     <!--css div popup end-->
     </td>
 </tr>
 
-    <tr class='passClass'>
-        <td>unit_test.demo.Case</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
-    </tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_case01</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_case02</div></td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        通过</a>
-    <div id='div_pt2.1' class="popup_window">
-        <pre>pt2.1: 接口正常
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        失败</a>
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: Traceback (most recent call last):
+  File "..\unit_test\demo.py", line 35, in test_case02
+    self.assertEqual(response.status_code, 400, '返回状态错误，不为400')
+AssertionError: 200 != 400 : 返回状态错误，不为400
 </pre>
     </div>
     <!--css div popup end-->
@@ -265,8 +257,8 @@
         <tr id='total_row'>
             <td>总计</td>
             <td>2</td>
-            <td>2</td>
-            <td>0</td>
+            <td>1</td>
+            <td>1</td>
             <td>0</td>
             <td>&nbsp;</td>
         </tr>
@@ -300,8 +292,8 @@
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:2, name:'通过'},
-                        {value:0, name:'失败'},
+                        {value:1, name:'通过'},
+                        {value:1, name:'失败'},
                         {value:0, name:'错误'}
                     ],
                     itemStyle: {

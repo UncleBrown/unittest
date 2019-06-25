@@ -1,23 +1,30 @@
 #coding:utf-8
+import sys
+sys.path.append("..") #将上层目录添加到模块搜索路径中
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import datetime
-
-class SendEmail:
+from configure.config import *
+     
+class SendEmail():
 
     #全局变量，为了在一个类或一个函数中使用由函数返回的变量
-    global send_user
-    global email_host
-    global password
-
-    password = "Jeremy@1314@."
-    email_host = "smtp.qq.com"
-    send_user = "494181687@qq.com"
+#      global send_user
+#      global email_host
+#      global password
+#      global user
+#      global user_list
+#      global sub
+#      global content
+# 
+#     password = "Jeremy@1314@."
+#     email_host = "smtp.qq.com"
+#     send_user = "494181687@qq.com"
 
     def send_mail(self,user_list,sub,content):
-        user = "Jeremy" + "<" + send_user + ">"
-        print("发件人:%s" %user)
+        user = name + "<" + send_user + ">"
+        #print("发件人:%s" %user)
 
         # 创建一个带附件的实例
         message = MIMEMultipart()
@@ -61,7 +68,7 @@ class SendEmail:
             server.connect(email_host,465)# 启用SSL发信, 端口一般是465
             #server.set_debuglevel(1)# 打印出和SMTP服务器交互的所有信息
             server.login(send_user,password)
-            server.sendmail(send_user,user_list,message.as_string())
+            server.sendmail(send_user,user_list,message.as_string()) #邮件内容要使用as_string将构造的邮件内容转换为string形式
             print("[info]:邮件发送成功！！！")
         except smtplib.SMTPException:
             print("[info]:无法发送邮件~~")
@@ -69,8 +76,15 @@ class SendEmail:
 
     def send_main(self):
         #收件人列表
-        user_list = ['litq@fun.tv']
-        print("收件人:%s" %user_list)
-        sub = "接口自动化测试报告"
-        content = "接口自动化测试结果:见附件"
+#         user_list = ['litq@fun.tv']
+#         print("收件人:%s" %user_list)
+#         sub = "接口自动化测试报告"
+#         content = "接口自动化测试结果:见附件"
+        #print(f"user_list:{user_list}")
         self.send_mail(user_list,sub,content)
+        
+# if __name__ == "__main__":
+#     X = SendEmail()
+#     X.send_mail()
+#     X.send_main(user_list, sub, content)
+            

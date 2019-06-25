@@ -1,8 +1,11 @@
 #coding:utf-8
+import sys
+sys.path.append("..")
 import unittest
 #导入测试用例模块
+
 from unit_test.demo import Case
-from unit_test.test_unnitest import Test
+#from unit_test.test_unnitest import Test
 from util import HTMLTestRunner
 from util.send_mail import SendEmail
 
@@ -21,7 +24,7 @@ class Runmain():
         # suite.addTest(Test('test_02'))
 
         #2种用法：第二种suite.addTests()
-        suite.addTests(map(Test, ["test_01", "test_02"]))
+        #suite.addTests(map(Test, ["test_01", "test_02"]))
         suite.addTests(map(Case, ["test_case01", "test_case02"]))
 
 
@@ -32,7 +35,7 @@ class Runmain():
         st = open('../report/report.html','wb')
         HTMLTestRunner.HTMLTestRunner(stream=st,title=u'接口自动化测试报告',description=u'测试者：Jeremy').run(suite)
 
-        #发送邮件带测试报告附件
+        #添加报告到邮件附件
         self.send_mail.send_main()
 
 if __name__ == '__main__':
